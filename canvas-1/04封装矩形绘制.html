@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cvs" width="600px" height="600px"></canvas>
+    <script>
+        var cvs = document.getElementById('cvs');
+        var ctx = cvs.getContext('2d');
+
+        //封装一个三角形的函数
+
+        ctx.moveTo(10,10);
+        ctx.lineTo(50,50);
+        ctx.lineTo(50,10);
+        ctx.closePath();
+        // ctx.strokeStyle="blue";
+        ctx.stroke();
+
+       
+        // ctx.beginPath();
+        
+        // ctx.moveTo(100,100);
+        // ctx.lineTo(150,150);
+        // ctx.lineTo(150,100);
+        // ctx.closePath();
+        // ctx.strokeStyle="red";
+        // ctx.stroke();
+
+function san(moveX,moveY,line1X,line1Y,line2X,line2Y,color){
+       
+        ctx.moveTo(moveX,moveY);
+        ctx.lineTo(line1X,line1Y);
+        ctx.lineTo(line2X,line2Y);
+        ctx.closePath();
+        ctx.strokeStyle=color;
+        ctx.stroke();
+        
+
+}
+
+san(10,10,50,50,50,10,"blue");
+
+san(100,100,150,150,150,100,"red");
+
+
+
+
+
+        // // 封装一个绘制矩形的函数
+        // function juXing( startX, startY, width, height, lineWidth, strokeStyle ) {
+
+        //     ctx.moveTo( startX, startY );
+        //     ctx.lineTo( startX + width, startY );
+        //     ctx.lineTo( startX + width, startY + height );
+        //     ctx.lineTo( startX, startY + height );
+        //     ctx.closePath();
+
+        //     ctx.lineWidth = lineWidth;
+        //     ctx.strokeStyle = strokeStyle;
+
+        //     ctx.stroke();
+        // }
+
+        // juXing( 10, 10, 60, 60, 4, 'deeppink' );
+
+        // // 放了防止重绘之前的路径，所以先把之前的路径清除掉
+        // // ctx.beginPath();
+        // juXing( 100, 10, 100, 100, 6, 'skyblue' );
+
+        /*
+        * 清除当前路径，开启新路径
+        * ctx.beginPath()
+        * */
+    </script>
+</body>
+</html>
