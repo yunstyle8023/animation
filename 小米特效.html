@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>小米特效</title>
+  <link rel="stylesheet" href="/xm.css" media="screen" title="no title" charset="utf-8">
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .xm {
+      width: 200px;
+      height: 200px;
+      background: #eee;
+      margin-left: 100px;
+      margin-top: 30px;
+    }
+
+    .xm-tp {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      margin: 0 auto;
+      position: relative;
+      top: 50px;
+      transition: all .2s linear;
+    }
+
+    .xm-tp:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      transform: translate3d(0,-2px,0);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="xm">
+    <div class="xm-tp"></div>
+  </div>
+</body>
+</html>

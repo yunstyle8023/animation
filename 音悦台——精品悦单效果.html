@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	    .fl{
+	    	float: left;
+	    }
+	    .fr{
+	    	float: right;
+	    }
+	    .clear::after{
+	    	display: block;
+	    	height: 0;
+	    	content: "";
+	    }
+	    a{
+	    	text-decoration: none;
+	    }
+		.jinpin-li1 a>img{
+			width: 220px;
+			height: 220px;
+		}
+		.jinpin-li1  h5{
+			font-size: 14px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			color: #666;
+			font-weight: normal;
+		}
+		.jinpin-li1  p{
+            text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			font-size: 12px;
+			color: #333;
+		}
+		.jinpin-li1  .big1  h5{
+			font-size: 14px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			color: #666;
+			font-weight: normal;
+		}
+		.jinpin-li1  p{
+            text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			font-size: 12px;
+			color: #333;
+		}		
+		li{
+			width: 220px;
+			height: 310px;
+			margin-right: 20px;
+            list-style: none;
+			position: relative;	
+		}
+		
+		.big1{
+			width: 460px;
+			height: 310px;
+			position: absolute;
+			top: 0;
+			display: none;
+			left: 0;
+			z-index: 50;
+			background: #eee;	
+		}
+		.big1 img{
+			width: 270px;
+			height: 310px;
+			float: left;
+			object-fit: cover;
+			object-position: left top;
+		}
+		.jinpin-li1:hover .big1{
+			display: block;
+		}
+		.jinpin-li1:hover .small{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<ul class="clear jinpin">
+            <li class="fl jinpin-li1">
+                    <a href="#" class="small">
+                            <img src="images/home/jinpin1.jpg" alt="">
+                            <h5>You were the shadow to my light</h5>
+                            <p>你是我生命之光中的一道暗影</p>
+                    </a>
+                    <div class="big1-box">
+                    <div class="big1">
+                    	    <img  src="images/home/jinpin1.jpg" alt="">
+	                    	<div class="fl right-font">
+	                    	        <h5>You were the shadow to my light</h5>
+	                                <p>你是我生命之光中的一道暗影</p>
+	                    	</div>
+                    </div>
+                    </div>   
+            </li>
+            <li class="fl jinpin-li1">
+                    <a href="#" class="small">
+                            <img src="images/home/jinpin1.jpg" alt="">
+                            <h5>You were the shadow to my light</h5>
+                            <p>你是我生命之光中的一道暗影</p>
+                    </a>
+                    <div class="big1">
+                    	    <img src="images/home/jinpin1.jpg" alt="">
+	                    	<div class="fl">
+	                    	        <h5>You were the shadow to my light</h5>
+	                                <p>你是我生命之光中的一道暗影</p>
+	                    	</div>
+                    </div>  
+           
+            </li>
+    </ul>
+</body>
+</html>

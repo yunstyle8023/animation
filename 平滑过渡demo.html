@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+</head>
+<style>
+*{
+	padding: 0;
+	margin: 0;
+}
+div{
+	margin-left: 100px;
+}
+.header-2{
+	display: inline-block;
+	width: 80px;
+	height: 21px;
+	background-color: #000;
+	text-decoration: none;
+	color: #ccc;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+.header-2 ul{
+	position: absolute;
+	overflow: hidden;
+	width: 80px;
+	height: 180px;
+	background: #000;
+}
+.header-2 li{
+	overflow: hidden;  /*演示1 */
+	color:#ccc;
+	height: 0px;
+	line-height: 36px;
+	text-align: center;
+	transition: height .2s;
+}
+.header-2:hover{
+	background-color: #222222;
+	overflow: visible;
+}
+.header-2:hover ul{
+	height: 180px;
+}
+.header-2:hover li{
+	background-color: #222222;
+	height: 36px;
+}
+.header-2 li:hover{
+	background: #5A840A;
+	color: #fff;
+}
+</style>
+<body>
+	<div>
+		<a href="pd.html" class="header-2">频道
+				<ul>
+					<li>韩流频道</li>
+					<li>华语频道</li>
+					<li>欧美频道</li>
+					<li>日语频道</li>
+					<li>粉丝聚集</li>
+				</ul>	
+			</a>
+	</div>
+</body>
+</html>

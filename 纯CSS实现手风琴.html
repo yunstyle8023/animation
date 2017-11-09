@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		.d1{
+			height: 240px;
+			width: 400px;
+			background: red;
+		}
+		.d21{
+			height: 120px;
+			width: 400px;
+			background: green;
+
+		}
+		.d22{
+			height: 120px;
+			width: 400px;
+			background: yellow;
+
+		}
+		.d23{
+			height: 120px;
+			width: 400px;
+			background: blue;
+
+		}
+		.d24{
+			height: 120px;
+			width: 400px;
+			background: pink;
+		}
+		.d2{
+			position: absolute;
+			left: 0;
+			top: 240px;
+		}
+
+		.d21:hover{
+			height: 240px;
+			width: 400px;
+			background: green;
+		}
+		.d22:hover{
+			height: 240px;
+			width: 400px;
+			background: yellow;
+		}
+		.d23:hover{
+			height: 240px;
+			width: 400px;
+			background: blue;
+		}
+		.d24:hover{
+			height: 240px;
+			width: 400px;
+			background: pink;
+		}
+		.d2:hover+.d1{
+			height: 120px;
+			width: 400px;
+			background: red;
+		}
+		.d2:hover{
+			top:120px;
+		}
+		.d2 li{
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="d2">
+		<li class="d21">21</li>
+		<li class="d22">22</li>
+		<li class="d23">23</li>
+		<li class="d24">24</li>
+	</ul>
+	<div class="d1">1</div>
+</body>
+</html>

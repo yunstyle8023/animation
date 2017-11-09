@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    *{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	    /* 方法四 */
+	    .bg{
+	    	width: 100%;
+	    	height: 100%;
+	    	position: absolute;
+	    	top: 0;
+	    	left: 0;
+	    	z-index: -100;
+	    	background: url("1.jpg");
+	    	background-size:100% 100%;
+	    	transition: all .3s ease-in-out; 
+	    }
+	    .a1:hover ~.bg{
+           background: url("1.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a2:hover ~.bg{
+           background: url("2.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a3:hover ~.bg{
+           background: url("3.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a4:hover ~.bg{
+           background: url("4.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a5:hover ~.bg{
+           background: url("5.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a6:hover ~.bg{
+           background: url("6.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a7:hover ~.bg{
+           background: url("1.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a8:hover ~.bg{
+           background: url("2.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a9:hover ~.bg{
+           background: url("3.jpg");
+	       background-size:100% 100%; 
+	    }
+	    .a10:hover ~.bg{
+           background: url("4.jpg");
+	       background-size:100% 100%; 
+	    }
+
+
+		.H-main{
+			position: relative;
+			overflow: hidden;
+			width: 75%;
+			height: 415px;
+			margin: 30px auto;
+		}
+		.main-right{
+			float: right;
+			width: 200px;
+			height: 300px;
+			background:rgba(255,255,255,.6);
+			z-index: 50;
+		}
+		.main-right a{
+			font-size: 13px;
+			line-height: 30px;
+			text-decoration: none;
+			text-overflow: ellipsis;
+			white-space:  nowrap;
+			overflow: hidden;
+			z-index: 100;
+
+		}
+		.loop-image{
+			/* 方法三 */
+			/* display: none;-------opacity: 0; 
+			   display:block;--------display: none; */
+			width: 100%;
+			height: 415px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -100;
+			/* 方法二 */
+			/* opacity: 0; 
+			transition: all .3s ease-in-out;  */
+		}
+		/* 方法一 */
+		/* .i1{
+			z-index: -2;
+		}
+		.a1:hover ~.i1{
+			z-index: -1;
+		}
+		.a2:hover ~.i2{
+			z-index: -1;
+		}
+		.a3:hover ~.i3{
+			z-index: -1;
+		}
+		.a4:hover ~.i4{
+			z-index: -1;
+		}
+		.a5:hover ~.i5{
+			z-index: -1;
+		}
+		.a6:hover ~.i6{
+			z-index: -1;
+		}
+		.a7:hover ~.i7{
+			z-index: -1;
+		}
+		.a8:hover ~.i8{
+			z-index: -1;
+		}
+		.a9:hover ~.i9{
+			z-index: -1;
+		}
+		.a10:hover ~.i10{
+			z-index: -1;
+		} */
+        /* 方法2 */
+		/* .i1{
+			opacity: 1;
+		}
+		.a1:hover ~.i1{
+		    opacity: 1;
+		} 
+		.a1:hover~.i2,.a1:hover~.i3,.a1:hover~.i4,.a1:hover~.i5,.a1:hover~.i6,.a1:hover~.i7,.a1:hover~.i8,.a1:hover~.i9,.a1:hover~.i10{
+		    opacity: 0;
+		}
+		
+		.a2:hover ~.i2{
+		    opacity: 1;
+		}
+		.a2:hover ~.i1,.a2:hover~.i3,.a2:hover~.i4,.a2:hover~.i5,.a2:hover~.i6,.a2:hover~.i7,.a2:hover~.i8,.a2:hover~.i9,.a2:hover~.i10{
+		    opacity: 0;
+		}
+		
+		.a3:hover ~.i3{
+		    opacity: 1;
+		}
+		.a3:hover ~.i1,.a3:hover~.i2,.a3:hover~.i4,.a3:hover~.i5,.a3:hover~.i6,.a3:hover~.i7,.a3:hover~.i8,.a3:hover~.i9,.a3:hover~.i10{
+		            opacity: 0;
+		}
+		
+		.a4:hover ~.i4{
+		            opacity: 1;
+		}
+		.a4:hover ~.i1,.a4:hover~.i2,.a4:hover~.i3,.a4:hover~.i5,.a4:hover~.i6,.a4:hover~.i7,.a4:hover~.i8,.a4:hover~.i9,.a4:hover~.i10{
+		            opacity: 0;
+		}
+		
+		.a5:hover ~.i5{
+		            opacity: 1;
+		}
+		.a5:hover ~.i1,.a5:hover~.i2,.a5:hover~.i3,.a5:hover~.i4,.a5:hover~.i6,.a5:hover~.i7,.a5:hover~.i8,.a5:hover~.i9,.a5:hover~.i10{
+		            opacity: 0;
+		}
+		
+		.a6:hover ~.i6{
+		            opacity: 1;
+		}
+		.a6:hover ~.i1,.a6:hover ~.i2,.a6:hover~.i3,.a6:hover~.i4,.a6:hover~.i5,.a6:hover~.i7,.a6:hover~.i8,.a6:hover~.i9,.a6:hover~.i10{
+		            opacity: 0;
+		}
+		
+		.a7:hover ~.i7{
+		            opacity: 1;
+		}
+		.a7:hover ~.i1,.a7:hover~.i2,.a7:hover~.i3,.a7:hover~.i4,.a7:hover~.i5,.a7:hover~.i6,.a7:hover~.i8,.a7:hover~.i9,.a7:hover~.i10{
+		            opacity: 0;
+		}
+		
+		.a8:hover ~.i8{
+		            opacity: 1;
+		}
+		.a8:hover ~.i1,.a8:hover~.i2,.a8:hover~.i3,.a8:hover~.i4,.a8:hover~.i5,.a8:hover~.i6,.a8:hover~.i7,.a8:hover~.i9,.a8:hover~.i10{
+		            opacity: 0;
+		}
+		
+		.a9:hover ~.i9{
+		            opacity: 1;
+		}
+		.a9:hover ~.i1,.a9:hover~.i2,.a9:hover~.i3,.a9:hover~.i4,.a9:hover~.i5,.a9:hover~.i6,.a9:hover~.i7,.a9:hover~.i8,.a9:hover~.i10{
+		            opacity: 0;
+		}
+		
+		.a10:hover ~.i10{
+		            opacity: 1;
+		}
+		.a10:hover ~.i1,.a10:hover~.i2.a10:hover~.i3,.a10:hover~.i4,.a10:hover~.i5,.a10:hover~.i6,.a10:hover~.i7,.a10:hover~.i8,.a10:hover~.i9{
+		            opacity: 0;
+		} */
+		
+		
+		/* 方法四 */
+
+		
+		
+		
+	</style>
+</head>
+<body>
+	<div class="H-main">
+	    <div class="main-right">
+	            <a class="a1" href="">我曾经跨过山和大海 也穿过人山人海</a><br>
+	            <a class="a2" href="">我曾经拥有着的一切 转眼都飘散</a><br>
+	            <a class="a3" href="">我曾经失落失望 失掉所有方向</a><br>
+	            <a class="a4" href="">直到看见平凡 才是唯一的答案</a><br>
+	            <a class="a5" href="">我曾经毁了我的一切 只想永远地离开</a><br>
+	            <a class="a6" href="">我曾经堕入无边黑暗 想挣扎无法自拔</a><br>
+	            <a class="a7" href="">我曾经像你像他 像那野草野花</a><br>
+	            <a class="a8" href="">绝望着 渴望着 亦哭亦笑着平凡着</a><br>
+	            <a class="a9" href="">我曾经跨过山和大海 也穿过人山人海</a><br>
+	            <a class="a10" href="">我曾经问遍整个世界 从来没得到答案</a>
+	    	    <!-- <img src="channel-1.jpg" alt="" class="loop-image i1">
+			    <img src="scoll1.jpg" alt="" class="loop-image i2">
+				<img src="scoll2.jpg" alt="" class="loop-image i3">
+				<img src="channel-1.jpg" alt="" class="loop-image i4">
+			    <img src="scoll1.jpg" alt="" class="loop-image i5">
+				<img src="scoll2.jpg" alt="" class="loop-image i6">
+				<img src="channel-1.jpg" alt="" class="loop-image i7">
+			    <img src="scoll1.jpg" alt="" class="loop-image i8">
+				<img src="scoll2.jpg" alt="" class="loop-image i9">
+				<img src="scoll1.jpg" alt="" class="loop-image i10"> -->
+                <!-- 方法四 -->
+				<div class="bg"></div>
+	    </div>
+	</div>
+</body>
